@@ -7,7 +7,7 @@ import android.widget.Toast;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.databinding.ActivityMainBinding;
+import com.termux.termxide.databinding.ActivityMainBinding;
 import com.termux.termxide.managers.SettingsManager;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,21 +21,21 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		settingsManager = new SettingsManager(this);
 
-		if (settingsManager.getIsFirst()) {
-			startMyActivity(FirstActivity.class);
-			finish();
-		}
+		// if (settingsManager.getIsFirst()) {
+		// 	startMyActivity(FirstActivity.class);
+		// 	finish();
+		// }
 
 		binding = ActivityMainBinding.inflate(getLayoutInflater());
 		setContentView(binding.getRoot());
 
 		initializeUI();
 //		initNavView();
-
 		initOnBackPressed();
 	}
 
 	private void initializeUI() {
+		
 	}
 
 //	private void initNavView() {

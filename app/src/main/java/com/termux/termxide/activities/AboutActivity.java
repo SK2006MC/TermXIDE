@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.databinding.ActivityAboutBinding;
+import com.termux.termxide.databinding.ActivityAboutBinding;
 
 public class AboutActivity extends AppCompatActivity {
 

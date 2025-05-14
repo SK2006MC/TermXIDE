@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.termux.R;
+import com.termux.termxide.R;
 
 
 public class SettingsFragment extends PreferenceFragmentCompat {

@@ -14,11 +14,16 @@ public class SettingsManager {
 	public SettingsManager(Context context){
 		preferences = PreferenceManager.getDefaultSharedPreferences(context);
 	}
+
 	public boolean getIsFirst() {
 		return preferences.getBoolean(KEY_IS_FIRST,true);
 	}
 
 	public String getHomePath(){
 		return preferences.getString(KEY_HOME_PATH,"");
+	}
+
+	public void setHomePath(String path) {
+		preferences.edit().putString(KEY_HOME_PATH,path).apply();
 	}
 }

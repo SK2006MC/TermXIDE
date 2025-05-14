@@ -42,5 +42,7 @@
     </string>
 	<string name="files_view_left">Files view left</string>
 	<string name="files_view_right">Files view right</string>
-    <string name="file_icon">File icon</string>
+	<string name="file_icon">File icon</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

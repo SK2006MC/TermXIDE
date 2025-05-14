@@ -6,7 +6,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.DocumentsContract;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -17,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.termux.databinding.ActivityFirstBinding;
+import com.termux.termxide.databinding.ActivityFirstBinding;
 import com.termux.termxide.managers.SettingsManager;
 
 public class FirstActivity extends AppCompatActivity {
@@ -52,9 +51,9 @@ public class FirstActivity extends AppCompatActivity {
 						// Persist permission if needed
 						final int takeFlags = result.getData().getFlags()
 								& (Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-						getContentResolver().takePersistableUriPermission(folderUri, takeFlags);
+						getContentResolver().takePersistableUriPermission(folderUri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 						// Save folderUri to settings if needed
-						// settingsManager.setFolderUri(folderUri.toString());
+						settingsManager.setHomePath(folderUri.toString());
 					}
 				} else {
 					Toast.makeText(this, "No folder selected", Toast.LENGTH_SHORT).show();
@@ -118,11 +117,5 @@ public class FirstActivity extends AppCompatActivity {
 				finish();
 			}
 		}
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		// No longer needed, handled by ActivityResultLauncher
 	}
 }

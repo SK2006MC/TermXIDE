@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:versionCode="1"
-	android:versionName="1.0">
+	android:versionName="1.0"
+	android:sharedUserId="${TERMUX_PACKAGE_NAME}">
 
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -14,6 +15,7 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 	<application
+		android:name=".TermXIDE"
 		android:allowBackup="true"
 		android:hardwareAccelerated="true"
 		android:icon="@mipmap/ic_launcher"
@@ -25,7 +27,7 @@
 		android:vmSafeMode="false">
 
 		<activity
-			android:name=".termxide.activities.MainActivity"
+			android:name=".activities.MainActivity"
 			android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -34,16 +36,16 @@
 		</activity>
 
 		<activity
-			android:name=".termxide.activities.LogActivity"
+			android:name=".activities.LogActivity"
 			android:exported="false" />
 		<activity
-			android:name=".termxide.activities.FirstActivity"
+			android:name=".activities.FirstActivity"
 			android:exported="false" />
 		<activity
-			android:name=".termxide.activities.AboutActivity"
+			android:name=".activities.AboutActivity"
 			android:exported="true" />
 		<activity
-			android:name=".termxide.activities.SettingsActivity"
+			android:name=".activities.SettingsActivity"
 			android:exported="true" />
 	</application>
 

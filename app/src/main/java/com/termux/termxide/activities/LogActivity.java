@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.termux.R;
-import com.termux.databinding.ActivityLogBinding;
-import com.termux.databinding.ItemLogBinding;
+import com.termux.termxide.R;
+import com.termux.termxide.databinding.ActivityLogBinding;
+import com.termux.termxide.databinding.ItemLogBinding;
 
 import java.util.ArrayList;
 import java.util.List;

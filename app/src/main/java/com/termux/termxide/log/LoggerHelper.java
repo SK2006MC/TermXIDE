@@ -11,7 +11,6 @@ public class LoggerHelper {
 
 	public LoggerHelper(android.content.Context context, String rootPath) {
 		this.myfileLogger = new FileLogger( rootPath + "/log.txt");
-
 		this.loggingExecutor = Executors.newSingleThreadExecutor(new LoggingThreadFactory());
 	}
 
